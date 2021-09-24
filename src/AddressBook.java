@@ -8,17 +8,22 @@ public class AddressBook {
     }
 
     public void addBuddy(BuddyInfo buddy) {
-        buddies.add(buddy);
+        if (buddy != null) {
+            buddies.add(buddy);
+        }
     }
 
-    public void removeBuddy(BuddyInfo buddy) {
-        buddies.remove(buddy);
+    public BuddyInfo removeBuddy(int index) {
+        if (index >= 0 && index < buddies.size()) {
+            return buddies.remove(index);
+        }
+        return null;
     }
 
     public static void main(String[] args) {
         BuddyInfo buddy = new BuddyInfo("John", "Carleton University", "613-xxx-xxxx");
         AddressBook book = new AddressBook();
         book.addBuddy(buddy);
-        book.removeBuddy(buddy);
+        book.removeBuddy(0);
     }
 }
