@@ -4,11 +4,6 @@ public class BuddyInfo {
     private String address;
     private String phoneNumber;
 
-    public static void main(String[] args) {
-        BuddyInfo buddy = new BuddyInfo("Homer", "", "");
-        System.out.println("Hello " + buddy.getName());
-    }
-
     public BuddyInfo() {
         this("Normal Human", "", "");
     }
